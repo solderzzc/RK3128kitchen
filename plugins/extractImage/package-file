@@ -2,7 +2,7 @@
 #
 #HWDEF		HWDEF
 package-file	package-file
-bootloader	RK29xxLoader(L)_V2.14.bin
+bootloader	RK3128MiniLoaderAll_V2.19.bin
 parameter	parameter
 misc		Image/misc.img
 kernel		Image/kernel.img

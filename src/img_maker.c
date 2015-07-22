@@ -7,7 +7,7 @@
 #include "rkafp.h"
 #include "md5.h"
 
-unsigned int chiptype = 0x50;
+unsigned int chiptype = 0x33313241;
 
 unsigned int import_data(const char* infile, void *head, size_t head_len, FILE *fp)
 {
@@ -92,7 +92,7 @@ int pack_rom(const char *loader_filename, const char *image_filename, const char
 	struct bootloader_header loader_header;
 
 	rom_header.chip = chiptype;
-	rom_header.code = 0x01030000;
+	rom_header.code = 0x01060000;
 	nowtime = time(NULL);
 	localtime_r(&nowtime, &local_time);
 
@@ -114,7 +114,6 @@ int pack_rom(const char *loader_filename, const char *image_filename, const char
 	if (1 != fwrite(buffer, 0x66, 1, fp))
 		goto pack_fail;
 
-/*
 	printf("rom version: %x.%x.%x\n",
 		(rom_header.version >> 24) & 0xFF,
 		(rom_header.version >> 16) & 0xFF,
@@ -125,7 +124,6 @@ int pack_rom(const char *loader_filename, const char *image_filename, const char
 		rom_header.hour, rom_header.minute, rom_header.second);
 
 	printf("chip: %x\n", rom_header.chip);
-*/
 	fseek(fp, rom_header.loader_offset, SEEK_SET);
 	fprintf(stderr, "generate image...\n");
 	rom_header.loader_length = import_data(loader_filename, &loader_header, sizeof(loader_header), fp);

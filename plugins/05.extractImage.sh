@@ -128,7 +128,7 @@ extractImage_ExtractImage(){
 	mv parameter1G parameter 2>/dev/null
 
 	BOOTLOADER=`grep bootloader package-file |cut -f2|tr -d "\n\r"`
-	bl=`ls -1 RK29*bin`
+	bl=`ls -1 RK3128*bin`
 	if [ "$BOOTLOADER" != "$bl" ]
 	then
 		BackupFile package-file

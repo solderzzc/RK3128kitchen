@@ -74,7 +74,7 @@ fi
 while [ true ]
 do
 	dialogBT
-	echo $MENUITEMS|xargs dialog --colors --backtitle "${DIALOGBT}" --title 'RK29xx toolkit' --menu "Select command" 20 70 15 2> $tempfile
+	echo $MENUITEMS|xargs dialog --colors --backtitle "${DIALOGBT}" --title 'RK3128 toolkit' --menu "Select command" 20 70 15 2> $tempfile
 	case $? in
 		0)
 			s=`cat $tempfile`
