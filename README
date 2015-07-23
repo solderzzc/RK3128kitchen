@@ -1,7 +1,7 @@
 development and testing in progress!!!
 
 English:
-This package is designed to automate operations firmware update for the devices based on processor RK2918.
+This package is designed to automate operations firmware update for the devices based on processor RK3128.
 
 Important!
 Use of this software package can cause damage to your device!
@@ -63,7 +63,7 @@ Typing the space character forces dialog to complete the current name (up to the
 Use a carriage return or the "OK" button to accept the current value in the text-entry window and exit.
 
 Russian:
-Этот пакет создан для автоматизации операций модификации прошивок для устройств на основе процессора РК2918.
+Этот пакет создан для автоматизации операций модификации прошивок для устройств на основе процессора РК3128.
 
 Важно!
 Использование данного программного пакета может привести к повреждению вашего устройства!
